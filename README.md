@@ -1,7 +1,7 @@
 tmux-tpm
 =========
 
-[![Build Status](https://travis-ci.org/suzuki-shunsuke/ansible-tmux-conf.svg?branch=master)](https://travis-ci.org/suzuki-shunsuke/ansible-tmux-conf)
+[![Build Status](https://travis-ci.org/suzuki-shunsuke/ansible-tmux-tpm.svg?branch=master)](https://travis-ci.org/suzuki-shunsuke/ansible-tmux-tpm)
 
 Install [tmux-plugins/tpm](https://github.com/tmux-plugins/tpm).
 
