@@ -12,7 +12,10 @@ addons:
     packages:
     - ansible
 
-before_script: cd tests
+before_install: cd tests
+
+install:
+- ansible-galaxy install -r roles.yml
 
 script:
 - ansible-playbook -i inventory-local test.yml

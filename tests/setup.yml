@@ -1,0 +1,6 @@
+---
+- hosts: default
+  roles:
+  - suzuki-shunsuke.go-ubuntu
+  - suzuki-shunsuke.go-module
+  - ghq

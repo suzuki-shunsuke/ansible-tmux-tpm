@@ -9,11 +9,17 @@ Requirements
 ------------
 
 * git
+* [motemen/ghq](https://github.com/motemen/ghq)
 
 Role Variables
 --------------
 
-Nothing.
+* tmux_tpm_ghq_executable: The executable path of ghq command. The default is "ghq".
+
+Dependencies
+------------
+
+* [suzuki-shunsuke.ghq-module](https://galaxy.ansible.com/suzuki-shunsuke/ghq-module/)
 
 Example Playbook
 ----------------
