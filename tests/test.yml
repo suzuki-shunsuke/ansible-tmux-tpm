@@ -4,4 +4,4 @@
   roles:
   - suzuki-shunsuke.ghq-module
   - role: ansible-tmux-tpm
-    tmux_tpm_ghq_executable: "{{ansible_env.HOME}}/.go/bin/ghq"
+    ghq_executable: "{{ansible_env.HOME}}/.go/bin/ghq"

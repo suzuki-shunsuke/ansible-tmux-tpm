@@ -14,7 +14,7 @@ Requirements
 Role Variables
 --------------
 
-* tmux_tpm_ghq_executable: The executable path of ghq command. The default is "ghq".
+* ghq_executable: The executable path of ghq command. The default is "ghq".
 
 Dependencies
 ------------

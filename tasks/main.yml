@@ -7,7 +7,7 @@
 - name: Clone tpm
   ghq:
     name: tmux-plugins/tpm
-    executable: "{{tmux_tpm_ghq_executable}}"
+    executable: "{{ghq_executable}}"
 - name: mkdir ~/.tmux/plugins
   file:
     path: "{{ansible_env.HOME}}/.tmux/plugins"
