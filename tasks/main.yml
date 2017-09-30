@@ -1,26 +1,11 @@
 ---
 # tasks file for tmux-tpm
-- name: ghq root
-  shell: "{{ansible_env.HOME}}/.go/bin/ghq root"
-  register: ghq_root
-  changed_when: false
-- name: Clone tpm
-  ghq:
-    name: tmux-plugins/tpm
-    executable: "{{ghq_executable}}"
 - name: mkdir ~/.tmux/plugins
   file:
-    path: "{{ansible_env.HOME}}/.tmux/plugins"
+    path: "{{tmux_tpm_plugins_path}}"
     state: directory
-- name: Check ~/.tmux/plugins/tpm
-  stat:
-    path: "{{ansible_env.HOME}}/.tmux/plugins/tpm"
-  register: st
-- name: Back up ~/.tmux/plugins/tpm
-  shell: "mv {{ansible_env.HOME}}/.tmux/plugins/tpm {{ansible_env.HOME}}/.tmux/plugins/tpm.{{ansible_date_time.date}}-{{ansible_date_time.hour}}-{{ansible_date_time.minute}}-{{ansible_date_time.second}}"
-  when: st.stat.exists and not st.stat.islnk
-- name: Make symbolic links
-  file:
-    src: "{{ghq_root.stdout}}/github.com/tmux-plugins/tpm"
-    dest: "{{ansible_env.HOME}}/.tmux/plugins/tpm"
-    state: link
+- name: Clone the tpm repository
+  git:
+    repo: "{{tmux_tpm_repo}}"
+    dest: "{{tmux_tpm_plugins_path}}/tpm"
+    version: "{{tmux_tpm_version}}"
