@@ -1,7 +1,7 @@
----
-- include: setup.yml
 - hosts: default
+  vars:
+    playbook_nonroot: "{{ (ansible_env.USER is undefined) | ternary(ansible_env.HOME != '/root', ansible_env.USER != 'root') }}"
   roles:
-  - suzuki-shunsuke.ghq-module
-  - role: ansible-tmux-tpm
-    ghq_executable: "{{ansible_env.HOME}}/.go/bin/ghq"
+    - role: geerlingguy.git
+      become: "{{playbook_nonroot}}"
+    - ansible-tmux-tpm

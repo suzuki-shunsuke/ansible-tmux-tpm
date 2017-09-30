@@ -1,17 +1,16 @@
 galaxy_info:
   author: Suzuki Shunsuke
-  description: Install tmux-plugins/tpm
+  description: ansible role to install tmux-plugins/tpm
   license: MIT
-  min_ansible_version: 1.2
+  min_ansible_version: 2.2
   github_branch: master
 
   platforms:
-  - name: GenericLinux
-    versions:
-    - all
+    - name: GenericLinux
+      versions:
+        - all
 
   galaxy_tags:
-  - tmux
+    - tmux
 
-dependencies:
-- suzuki-shunsuke.ghq-module
+dependencies: []

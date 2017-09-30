@@ -1,3 +1,5 @@
 ---
 # defaults file for tmux-tpm
-ghq_executable: ghq
+tmux_tpm_plugins_path: "{{ansible_env.HOME}}/.tmux/plugins"
+tmux_tpm_repo: "https://github.com/tmux-plugins/tpm"
+tmux_tpm_version: HEAD
