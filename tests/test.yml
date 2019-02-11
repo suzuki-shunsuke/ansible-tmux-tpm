@@ -1,7 +1,0 @@
-- hosts: default
-  vars:
-    playbook_nonroot: "{{ (ansible_env.USER is undefined) | ternary(ansible_env.HOME != '/root', ansible_env.USER != 'root') }}"
-  roles:
-    - role: geerlingguy.git
-      become: "{{playbook_nonroot}}"
-    - ansible-tmux-tpm

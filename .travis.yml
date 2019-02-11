@@ -15,10 +15,11 @@ addons:
 before_install: cd tests
 
 install:
+  - pip install molecule
   - ansible-galaxy install -r roles.yml
 
 script:
-  - ansible-playbook -i localhost test.yml
+  - molecule test
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
