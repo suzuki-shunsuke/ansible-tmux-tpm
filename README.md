@@ -29,6 +29,18 @@ Nothing.
     - suzuki-shunsuke.tmux-tpm
 ```
 
+## Development
+
+We use [Molecule](https://molecule.readthedocs.io/en/latest/index.html) for test.
+
+* Docker Engine
+* Molecule
+
+```
+$ molecule lint
+$ molecule test
+```
+
 ## License
 
 [MIT](LICENSE)
