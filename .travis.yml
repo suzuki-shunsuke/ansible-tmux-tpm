@@ -12,7 +12,7 @@ addons:
       - libssl-dev
 
 install:
-  - pip install molecule
+  - pip install molecule docker
 
 script:
   - molecule test
