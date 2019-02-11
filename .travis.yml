@@ -7,10 +7,9 @@ dist: trusty
 
 addons:
   apt:
-    sources:
-      - sourceline: ppa:ansible/ansible
     packages:
-      - ansible
+      - python-pip
+      - libssl-dev
 
 install:
   - pip install molecule
