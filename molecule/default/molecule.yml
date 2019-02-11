@@ -14,7 +14,7 @@ platforms:
       USER: foo
 provisioner:
   name: ansible
-  log: true
+  # log: true
   lint:
     name: ansible-lint
   options:
