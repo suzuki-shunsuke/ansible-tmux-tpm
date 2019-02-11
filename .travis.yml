@@ -7,18 +7,15 @@ dist: trusty
 
 addons:
   apt:
-    sources:
-      - sourceline: ppa:ansible/ansible
     packages:
-      - ansible
-
-before_install: cd tests
+      - python-pip
+      - libssl-dev
 
 install:
-  - ansible-galaxy install -r roles.yml
+  - pip install molecule docker
 
 script:
-  - ansible-playbook -i localhost test.yml
+  - molecule test
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
