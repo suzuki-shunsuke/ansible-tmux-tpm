@@ -12,11 +12,8 @@ addons:
     packages:
       - ansible
 
-before_install: cd tests
-
 install:
   - pip install molecule
-  - ansible-galaxy install -r roles.yml
 
 script:
   - molecule test
