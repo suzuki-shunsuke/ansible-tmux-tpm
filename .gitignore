@@ -2,3 +2,4 @@
 .vagrant
 tests/_roles/*
 !.gitkeep
+*.pyc
