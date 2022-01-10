@@ -1,6 +1,6 @@
 ---
 # tasks file for tmux-tpm
-- name: mkdir ~/.tmux/plugins
+- name: mkdir {{tmux_tpm_plugins_path}}
   file:
     path: "{{tmux_tpm_plugins_path}}"
     state: directory
